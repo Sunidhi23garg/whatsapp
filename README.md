@@ -1,4 +1,4 @@
-# WhatsApp-like App (Local MongoDB, No Replica Set)
+# WhatsApp-like App 
 
 This build is configured **for local MongoDB** (no replica set needed) and includes:
 - **Task 1:** Script to read payloads and insert/update `whatsapp.processed_messages`
@@ -14,8 +14,6 @@ This build is configured **for local MongoDB** (no replica set needed) and inclu
 - conversation_2_message_2.json
 - conversation_2_status_1.json
 - conversation_2_status_2.json
-
-You can replace the included samples with your own (same structure).
 
 ## Quick Start
 
