@@ -1,6 +1,6 @@
 # WhatsApp-like App 
 
-This build is configured **for local MongoDB** (no replica set needed) and includes:
+This build is configured **for MongoDB** and includes:
 - **Task 1:** Script to read payloads and insert/update `whatsapp.processed_messages`
 - **Task 2:** WhatsApp Web–like UI (React + Vite, CSS)
 - **Task 3:** "Send Message" demo with real-time updates via Socket.IO (emits on save/update; no change streams required)
@@ -24,10 +24,6 @@ This build is configured **for local MongoDB** (no replica set needed) and inclu
 
 
 ## Quick Start
-
-### 0) Prereqs
-- Node.js 18+
-- Local MongoDB running on `mongodb://localhost:27017`
 
 ### 1) Backend
 ```bash
@@ -54,4 +50,4 @@ The UI should immediately show chats. Real-time updates are emitted on save/upda
 - DB: `whatsapp` | Collection: `processed_messages`
 - Status flow recognized: `sent`, `delivered`, `read`
 - Frontend groups chats by `wa_id`; clicking shows messages + statuses + timestamps.
-- All CSS is hand-written).
+- All CSS is hand-written.
