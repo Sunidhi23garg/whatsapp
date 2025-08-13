@@ -15,6 +15,14 @@ This build is configured **for local MongoDB** (no replica set needed) and inclu
 - conversation_2_status_1.json
 - conversation_2_status_2.json
 
+### Screenshots
+<img width="1919" height="514" alt="image" src="https://github.com/user-attachments/assets/41c9c2d0-f456-4fee-8e06-1bcf785f13d7" />
+
+- In mobile...
+<img width="625" height="500" alt="image" src="https://github.com/user-attachments/assets/9113151c-ea78-4894-9692-3050f1ef08d7" />
+
+
+
 ## Quick Start
 
 ### 0) Prereqs
