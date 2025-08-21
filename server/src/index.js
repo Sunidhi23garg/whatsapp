@@ -8,10 +8,24 @@ import { connectDB } from "./db.js";
 import apiRoutes from "./routes/api.js";
 import Message from "./models/Message.js";
 
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import authRoutes from "./routes/auth.js";
+
+dotenv.config();
+
 const app = express();
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors({ origin: process.env.CLIENT_ORIGIN?.split(",") || "*" }));
+
+app.use("/api/auth", authRoutes);
+
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() => {
+  app.listen(5000, () => console.log("Server running on http://localhost:5000"));
+})
+.catch(err => console.error(err));
 
 app.get("/", (_req, res) => res.json({ ok: true, service: "whatsapp-server-local" }));
 app.use("/api", apiRoutes);
